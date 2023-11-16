@@ -1,7 +1,13 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="Program.cs" company="Hazel Eclipse">
+// <copyright file="IStakeDivisionCalculation.cs" company="Hazel Eclipse">
 // Copyright (c) Hazel Eclipse. All rights reserved.
 // </copyright>
 // -----------------------------------------------------------------------
 
-Console.WriteLine("Hello, World!");
+namespace Redi.Core.Calculation;
+
+public interface IStakeDivisionCalculation<T>
+    where T : class
+{
+    List<(T, decimal)> Execute();
+}
