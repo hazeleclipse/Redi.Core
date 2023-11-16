@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D29B8254-CACD-4080-BD61-0A586B23130E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Redi.Console", "src\Redi.Console\Redi.Console.csproj", "{9F58AA68-8BDD-4FC6-80FF-8BDE2D0D69E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Redi.Core", "src\Redi.Core\Redi.Core.csproj", "{0E7AD00D-7723-4828-B4A2-C05DCAB168D4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9F58AA68-8BDD-4FC6-80FF-8BDE2D0D69E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F58AA68-8BDD-4FC6-80FF-8BDE2D0D69E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F58AA68-8BDD-4FC6-80FF-8BDE2D0D69E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F58AA68-8BDD-4FC6-80FF-8BDE2D0D69E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E7AD00D-7723-4828-B4A2-C05DCAB168D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E7AD00D-7723-4828-B4A2-C05DCAB168D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E7AD00D-7723-4828-B4A2-C05DCAB168D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E7AD00D-7723-4828-B4A2-C05DCAB168D4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9F58AA68-8BDD-4FC6-80FF-8BDE2D0D69E8} = {D29B8254-CACD-4080-BD61-0A586B23130E}
+		{0E7AD00D-7723-4828-B4A2-C05DCAB168D4} = {D29B8254-CACD-4080-BD61-0A586B23130E}
+	EndGlobalSection
+EndGlobal
