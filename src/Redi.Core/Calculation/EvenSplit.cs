@@ -7,21 +7,21 @@
 namespace Redi.Core.Calculation;
 
 public class EvenSplit<T> : IStakeDivisionCalculation<T>
-    where T : class
+    where T : notnull
 {
-    public EvenSplit(ICollection<T> stakers, decimal dividend)
+    public EvenSplit(IReadOnlyCollection<T> stakers, Stake dividend)
     {
         Stakers = stakers;
         Dividend = dividend;
     }
 
-    private ICollection<T> Stakers { get; init; }
+    public IReadOnlyCollection<T> Stakers { get; init; }
 
-    private decimal Dividend { get; init; }
+    public decimal Dividend { get; init; }
 
-    public List<(T, decimal)> Execute()
+    public IReadOnlyCollection<(T, Stake)> Execute()
     {
-        var quotients = new List<(T, decimal)>();
+        var quotients = new List<(T, Stake)>();
         var quotient = Dividend / Stakers.Count;
 
         foreach (var staker in Stakers)

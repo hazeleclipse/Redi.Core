@@ -1,13 +1,14 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="IStakeDivisionCalculation.cs" company="Hazel Eclipse">
+// <copyright file="IIntegralWeightedCollection.cs" company="Hazel Eclipse">
 // Copyright (c) Hazel Eclipse. All rights reserved.
 // </copyright>
 // -----------------------------------------------------------------------
 
-namespace Redi.Core.Calculation;
+namespace Redi.Core.Collection;
 
-public interface IStakeDivisionCalculation<T>
+public interface IIntegralWeightedCollection<T>
+    : ICollection<KeyValuePair<T, Weight>>
     where T : notnull
 {
-    IReadOnlyCollection<(T, Stake)> Execute();
+    uint TotalWeight { get; }
 }

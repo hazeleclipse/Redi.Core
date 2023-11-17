@@ -1,13 +1,13 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="IStakeDivisionCalculation.cs" company="Hazel Eclipse">
+// <copyright file="IIntegralWeightedDictionary.cs" company="Hazel Eclipse">
 // Copyright (c) Hazel Eclipse. All rights reserved.
 // </copyright>
 // -----------------------------------------------------------------------
 
-namespace Redi.Core.Calculation;
+namespace Redi.Core.Collection;
 
-public interface IStakeDivisionCalculation<T>
+public interface IIntegralWeightedDictionary<T>
+    : IDictionary<T, Weight>, IIntegralWeightedCollection<T>
     where T : notnull
 {
-    IReadOnlyCollection<(T, Stake)> Execute();
 }
