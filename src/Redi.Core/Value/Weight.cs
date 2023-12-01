@@ -4,25 +4,27 @@
 // </copyright>
 // -----------------------------------------------------------------------
 
-namespace Redi.Core;
+namespace Redi.Core.Value;
 
 public readonly struct Weight
 {
+    private readonly ushort value;
+
     public Weight(ushort value)
     {
         ArgumentNullException.ThrowIfNull(value, nameof(value));
         ArgumentOutOfRangeException.ThrowIfLessThan(value, 1, nameof(value));
-        Value = value;
+        this.value = value;
     }
 
     public ushort Value
     {
-        get => Value;
+        get => this.value;
         init
         {
             ArgumentNullException.ThrowIfNull(value, nameof(value));
             ArgumentOutOfRangeException.ThrowIfLessThan(value, 1, nameof(value));
-            Value = value;
+            this.value = value;
         }
     }
 

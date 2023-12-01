@@ -4,6 +4,8 @@
 // </copyright>
 // -----------------------------------------------------------------------
 
+using Redi.Core.Value;
+
 namespace Redi.Core.Calculation;
 
 public class EvenSplit<T> : IStakeDivisionCalculation<T>

@@ -4,19 +4,31 @@
 // </copyright>
 // -----------------------------------------------------------------------
 
-namespace Redi.Core;
+namespace Redi.Core.Value;
 
 public readonly struct Stake
 {
+    private readonly decimal value;
+
     public Stake(decimal value)
     {
         ArgumentNullException.ThrowIfNull(value, nameof(value));
         ArgumentOutOfRangeException.ThrowIfNegative(value, nameof(value));
         ArgumentOutOfRangeException.ThrowIfGreaterThan(value, 1, nameof(value));
-        Value = value;
+        this.value = value;
     }
 
-    public decimal Value { get; init; }
+    public decimal Value
+    {
+        get => this.value;
+        init
+        {
+            ArgumentNullException.ThrowIfNull(value, nameof(value));
+            ArgumentOutOfRangeException.ThrowIfNegative(value, nameof(value));
+            ArgumentOutOfRangeException.ThrowIfGreaterThan(value, 1, nameof(value));
+            this.value = value;
+        }
+    }
 
     public static implicit operator Stake(decimal value)
         => new (value);
